@@ -1,0 +1,467 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: all 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Encabezado */
+header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    text-align: center;
+    padding: 70px 0;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    bottom: -80px;
+    left: -80px;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Navegación */
+nav {
+    background-color: #34495e;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 15px 0;
+    flex-wrap: wrap;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav a:hover {
+    background-color: #3498db;
+    transform: translateY(-2px);
+}
+
+nav a i {
+    font-size: 0.9rem;
+}
+
+/* Conceptos */
+.concepto {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    padding: 40px;
+    overflow: hidden;
+    position: relative;
+}
+
+.concepto::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: linear-gradient(to bottom, #3498db, #2c3e50);
+}
+
+.concepto h2 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eaeaea;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.concepto h2 i {
+    color: #3498db;
+    font-size: 1.8rem;
+}
+
+.concepto h3 {
+    color: #3498db;
+    margin: 25px 0 15px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.concepto h3 i {
+    font-size: 1.1rem;
+}
+
+.concepto p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.concepto ul, .concepto ol {
+    margin: 15px 0 15px 30px;
+}
+
+.concepto li {
+    margin-bottom: 8px;
+}
+
+.concepto img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    display: block;
+    border: 1px solid #eee;
+}
+
+.concepto iframe {
+    width: 100%;
+    min-height: 400px;
+    border: none;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* FAQ */
+.faq {
+    background-color: #e8f4fc;
+    padding: 25px;
+    border-radius: 8px;
+    margin: 25px 0;
+    border-left: 4px solid #3498db;
+}
+
+.faq h4 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+}
+
+.faq h4 i {
+    color: #3498db;
+}
+
+.faq p {
+    margin: 12px 0;
+}
+
+.faq p strong {
+    color: #2c3e50;
+}
+
+/* Comentarios */
+.comentarios {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    margin: 60px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.comentarios h2 {
+    margin-bottom: 25px;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.comentarios h2 i {
+    color: #3498db;
+}
+
+.comentarios p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input, textarea {
+    padding: 15px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 100%;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: fit-content;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Pie de página */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 60px;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer p {
+    opacity: 0.8;
+}
+
+/* Efectos de hover y focus */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    header {
+        padding: 50px 20px;
+    }
+    
+    header h1 {
+        font-size: 2.2rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    nav li {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    nav a {
+        justify-content: center;
+    }
+    
+    .concepto {
+        padding: 30px 20px;
+    }
+    
+    .comentarios {
+        padding: 30px 20px;
+    }
+    
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    header p {
+        font-size: 1rem;
+    }
+    
+    .concepto h2 {
+        font-size: 1.5rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    
+    .concepto h2 i {
+        font-size: 1.5rem;
+    }
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.concepto {
+    animation: fadeIn 0.6s ease-out forwards;
+}
+
+.concepto:nth-child(2) { animation-delay: 0.1s; }
+.concepto:nth-child(3) { animation-delay: 0.2s; }
+.concepto:nth-child(4) { animation-delay: 0.3s; }
+.concepto:nth-child(5) { animation-delay: 0.4s; }
+.concepto:nth-child(6) { animation-delay: 0.5s; }
+
+/* Estilos para código embebido (si incluyes ejemplos de código) */
+pre {
+    background: #2d2d2d;
+    color: #f8f8f2;
+    padding: 20px;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin: 20px 0;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+code {
+    background: #f0f0f0;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    color: #c7254e;
+}
+
+/* Estilos para el formulario */
+.mensaje-envio {
+    display: none;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 15px;
+    background: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    animation: fadeIn 0.5s;
+}
+
+.mensaje-envio i {
+    font-size: 1.5rem;
+}
+
+/* Validación de campos */
+input:invalid, textarea:invalid {
+    border-color: #ff6b6b;
+}
+
+input:focus:invalid, textarea:focus:invalid {
+    box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.2);
+}
+
+/* Efecto de carga */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+button[disabled] {
+    position: relative;
+    opacity: 0.7;
+}
+
+button[disabled]::after {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    border: 2px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
